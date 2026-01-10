@@ -1,0 +1,34 @@
+\begin{lemma}\label{lem:smooth_section}
+    Schneidet die Untermannigfaltigkeit \({\mathcal{V}}\) eines glatten Faserb\"undels \({\pi\colon\mathcal{B}\to\mathcal{N}}\) jede Faser transversal und in genau einem Punkt, ist \({\mathcal{V}}\) ein glatter Schnitt.
+\end{lemma}
+\begin{proof}
+    Da jede Faser in genau einem Punkt geschnitten wird, kann eine zu \({\pi}\) rechtsinverse Abbildung \({s\colon\mathcal{N}\to\mathcal{B}}\) definiert werden. Es verbleibt zu zeigen, dass \({s}\) glatt ist. Aus der Transversalit\"atsbedingung folgt, dass \({T_p(\pi|_{\mathcal{V}})}\) in jedem Punkt \({p\in\mathcal{V}}\) surjektiv (!), also ein Isomorphismus ist. Dann zeigt jedoch der Satz \"uber die implizite Funktion, dass die lokale Umkehrfunktion, also \({s}\), in \({p}\) glatt ist.
+\end{proof}
+
+\begin{theorem}[Aufhebungssatz]\label{thm:handle_removement}
+    Schneidet die Anklebesph\"are eines Henkels \({\Psi^{k+1}}\) den G\"urtel eines Henkels \({\Psi^k\colon\mathbb{S}^{k-1}\to\partial_+\mathcal{W}}\) transversal und in genau einem Punkt, ist 
+    \[\mathcal{W}\cong\mathcal{W}+\Psi^k+\Psi^{k+1}\,.\]
+\end{theorem}
+\begin{proof}
+    Zun\"achst existiert ein Diffeomorphismus \({\displaystyle\mathcal{W}\cong\mathcal{W}\mathop{+}^*\mathbb{D}^n}\) f\"ur einen Punkt \({*\in\partial_+\mathcal{W}}\). Da die Untermannigfaltigkeit \({\Lambda^{k+1}\setminus\{x\}\cup\Lambda^k\subseteq\partial_+\mathcal{W}}\) eine Scheibe ist (!), kann eine Diffeotopie gefunden werden, die diese auf die Scheibe \({\mathbb{S}_{\geq0}^k\subseteq\mathbb{D}^n}\), also \({\Lambda^k}\) auf \({\mathbb{S}^{k-1}\subseteq\mathbb{D}^n}\) abbildet. Gem\"a\ss{} Satz \ref{lem:handle_on_unit_disc} existiert eine Scheibenb\"undelstruktur \({\pi\colon\mathbb{D}^n+\Psi^k\to\mathcal{M}}\), wobei \({\Lambda^{k+1}}\) in \({\partial_+(\mathcal{W}+\Psi^k)}\) auf \({\mathbb{S}_{>0}^k\cup\{x\}}\) abgebildet wird und aufgrund der Annahme alle Fasern von \({\pi}\) transversal und in genau einem Punkt schneidet. Dies ist gem\"a\ss{} Satz \ref{lem:smooth_section} ein glatter Schnitt. Es folgt
+    \begin{align*}
+        \mathcal{W}+\Psi^k+\Psi^{k+1}\cong\mathcal{W}\mathop{+}^*\left(\mathbb{D}^n+\dot\Psi^k\right)+\dot\Psi^{k+1}\mathop{\cong}^{\ref{lem:glueing_disc_bundles}}\mathcal{W}\mathop{+}^*\mathbb{D}^n\cong\mathcal{W}\,.
+    \end{align*}
+
+\end{proof}
+\newpage
+Ein Henkel hei\ss e trivial, falls die Anklebeabbildung durch \({\mathbb{D}^{n-1}}\) faktorisiere. In diesem Fall l\"asst sich ein additives Rechtsinverses explizit konstruieren, was hier jedoch vermieden werde.
+\begin{corollary}[Ersetzungssatz]\label{cor:handle_replacement}
+    Sei \({1\leq k\leq n-3}\). Die Anklebeabbildung eines Henkels \({\Psi^{k+1}}\) schneide als einzigen \({k}\)-G\"urtel den G\"urtel von \({\Psi_{c_k}^k}\) transversal und in genau einem Punkt, und sei in \({\partial_+\mathcal{W}_{k+1}}\) isotop zu einem trivialen Henkel \({\Phi^{k+1}}\). Dann existiert eine Henkelzerlegung mit \({c_k-1}\) \({k}\)-Henkeln.
+\end{corollary}
+\begin{proof}
+    Sei ein zu \({\Phi^{k+1}}\) additiv rechtsinverser Henkel durch \({\Psi^{k+2}}\) gegeben. Dann gilt
+    \begin{align*}
+        \mathcal{W}_{k+1}&\cong\mathcal{W}_{k+1}+\Phi^{k+1}+\Psi^{k+2}\\
+        &\cong\mathcal{W}_{k+1}+\Psi^{k+1}+\dot{\Psi}^{k+2}\\
+        &\hspace{-3pt}\mathop{\cong}^{\text{Def.}}\mathcal{W}_{k-1}+\sum_{j=1}^{c_k}\Psi_j^k+\sum_{j=1}^{c_{k+1}}\Psi_j^{k+1}+\Psi^{k+1}+\dot{\Psi}^{k+2}\\
+        &\mathop{\cong}^{\ref{lem:sort_handles}}\mathcal{W}_{k-1}+\sum_{j=1}^{c_k-1}\Psi_j^k+\Psi_{c_k}^k+\Psi^{k+1}+\sum_{j=1}^{c_{k+1}}\dot{\Psi}_j^{k+1}+\ddot{\Psi}^{k+2}\\
+        &\mathop{\cong}^{\ref{thm:handle_removement}}\mathcal{W}_{k-1}+\sum_{j=1}^{c_k-1}\Psi_j^k+\sum_{j=1}^{c_{k+1}}\ddot{\Psi}_j^{k+1}+\dot{\ddot{\Psi}}^{k+2}\,,
+    \end{align*}
+    wobei die Akzente implizieren, dass es sich technisch gesehen nicht mehr um die gleichen Henkel handele.
+\end{proof}

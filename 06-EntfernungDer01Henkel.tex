@@ -1,0 +1,16 @@
+Um induktiv Henkel zu eliminieren, muss zun\"achst ein Induktionsanfang gezeigt werden. Hierzu m\"ussen die \(0\)- und \(1\)-Henkel eliminiert werden. 
+\begin{theorem}[Entfernung der 0-Henkel]\label{thm:zero_handle_rem}
+    Jeder H-Kobordismus besitzt eine Henkelzerlegung ohne \(0\)-Hen\-kel.
+\end{theorem}
+\begin{proof}
+    Da die Anklebesph\"are eines \(0\)-Henkels \(\Psi^0\) leer ist, gilt trivialerweise
+    \[\mathcal{M}\times\mathbb{I}+\Psi^0=\left(\mathcal{M}\times\mathbb{I}\right)\sqcup\mathbb{D}^n\,,\]
+    sodass das Anbringen eines \(0\)-Henkels eine Wegzusammenhangskomponente hinzuf\"ugt. Aufgrund von Bemerkung \ref{rem:incl_epi} kann \(\mathcal{W}_1\) nicht mehr Wegzusammenhangskomponenten als \(\mathcal{M}\) besitzen. Demnach existiert ein \(1\)-Henkel \(\Psi^1\colon \mathbb{S}^0\to\mathcal{W}_0\), der \(\mathcal{M}\times\mathbb{I}\) mit \(\mathbb{D}^n\) verbindet. Die Anklebesph\"are von \(\Psi^1\) schneidet den G\"urtel von \(\Psi^0\), also die gesamte Sph\"are \(\mathbb{S}^{n-1}\), nun transversal und in genau einem Punkt. Folglich heben sich die Henkel gem\"a\ss{} Satz \ref{thm:handle_removement} auf.
+\end{proof}
+Um die \(1\)-Henkel zu entfernen ist erstmals vonn\"oten, dass der H-Ko\-bor\-dis\-mus einfach zusammen\-h\"angt.
+\begin{theorem}[Entfernung der 1-Henkel]\label{thm:one_handle_rem}
+    Jeder zusammenh\"angende, mindestens \(5\)-dimensionale H-Kobordismus besitzt eine Henkelzerlegung ohne \(0\)- oder \(1\)-Henkel.
+\end{theorem}
+\begin{proof}
+    Zun\"achst sei \(\gamma_1\colon\mathbb{I}\to\mathbb{S}^{n-1}\setminus\mathbb{S}^0\subseteq\partial_+\mathcal{W}_1\) ein Weg mit Endpunkten \(x_1,x_2\in\partial_+\mathcal{W}_0\), der den G\"urtel von \(\Psi^1\) transversal und in genau einem Punkt schneide. Sind die \(0\)-Henkel gem\"a\ss{} Satz \ref{thm:zero_handle_rem} bereits eliminiert, ist \(\partial_+\mathcal{W}_0\cong\mathcal{M}\) wegzusammenh\"angend, und es existiert ein Weg \(\gamma_2\subseteq\partial_+\mathcal{W}_0\) von \(x_1\) zu \(x_2\), der keine Anklebesph\"are von \(1\)-Henkeln (endlich viele Punkte) treffe. Dann induziert \(\gamma_1\gamma_2\) eine stetige Abbildung \(\mathbb{S}^1\to\partial_+\mathcal{W}_1\), die mit dem schwachen Einbettungssatz von Whitney \ref{prop:whitney_weak_embedding} zuerst durch eine glatte Einbettung \(\Psi^1\) approximiert, und dann derart isotopiert werden kann, dass sie die Anklebesph\"aren aller \(2\)-Henkel transversal schneide. Die resultierende Einbettung sei durch \(\beta\) bezeichnet. Aus Dimensionsgr\"unden bedeute dies erneut, dass \(\beta\) von allen Anklebesph\"aren disjunkt ist und somit als Abbildung nach \(\partial_+\mathcal{W}_2\) aufgefasst werden kann. Nun existiert stets ein trivialer Henkel \(\Psi^2\), dessen Anklebeabbildung wegen \(\pi_1\left(\partial_+\mathcal{W}_2\right)=0\) (!) homotop zu \(\beta\) ist. Wegen \(1\cdot2+2=4\leq\dim\partial_+\mathcal{W}\), sind diese gem\"a\ss{} Satz \ref{prop:whitney_unique_embedding} in \(\partial_+\mathcal{W}_2\) sogar zueinander isotop, und Korollar \ref{cor:handle_replacement} erm\"oglicht das Ersetzen von \(\Psi^1\).
+\end{proof}

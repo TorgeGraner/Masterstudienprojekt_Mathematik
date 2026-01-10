@@ -1,0 +1,24 @@
+\section{Morsefunktionen}
+    Ein kritischer Punkt \({p\in\mathcal{W}}\) einer glatten Funktion \({f\colon\mathcal{W}\to[0,1]}\) hei\ss e entartet, falls die Matrix der
+    \[\frac{\partial^2f}{\partial\alpha_i\partial\alpha_j}\bigg|_p=\frac{\partial}{\partial\alpha_i}\left(q\mapsto\frac{\partial f}{\partial\alpha_j}\bigg|_q\right)\bigg|_p\in\mathbb{R}\]
+    singul\"ar ist.
+    \begin{definition}[Morse-Funktion]
+        Eine differenzierbare Abbildung \({f\colon\mathcal{W}\to[0,1]}\), sodass alle kritischen Punkte weder auf dem Rand von \({\mathcal{M}}\) liegen noch entartet sind, und \({f^{-1}\left(\{0\}\right)=\mathcal{M}}\) und \({f^{-1}\left(\{1\}\right)=\mathcal{N}}\) gelte.
+    \end{definition}
+    Die Bedeutung von Morse-Funktionen sei hier nur angerissen und es werden keine Beweise gegeben. F\"ur weitere Informationen siehe auch \cite{kosinski2013differential} Kapitel 7.
+
+\section{Existenz einer Henkelzerlegung}
+    Auf jedem Kobordismus \({\left(\mathcal{W},\mathcal{M},\mathcal{N}\right)}\) existiert eine Morse-Funktion \({f}\) mit kritischen Werten \({0<c_1<\dots<c_l<1}\). Seien \({d_k\in\,[0,1]}\) regul\"are Werte, sodass
+    \[0=d_0<c_1<d_1<\dots<d_{l-1}<c_l<d_l=1\]
+    gilt. Dann ist \({\mathcal{M}_j:=f^{-1}\left(\{d_j\}\right)}\) f\"ur \({0\leq j\leq l}\) eine geschlossene Mannigfaltigkeit, und \({\mathcal{F}_j:=f^{-1}\left([d_j,d_{j+1}]\right)}\) f\"ur \({0\leq j\leq l-1}\) ein Kobordismus von \({\mathcal{M}_j}\) zu \({\mathcal{M}_{j+1}}\). Aus 
+    \[\mathcal{F}_j\mathop{+}^{\mathcal{M}_{j+1}}\mathcal{F}_{j+1}\cong f^{-1}\left(\left[d_j,d_{j+2}\right]\right)\]
+    folgt induktiv
+    \[\mathcal{W}\cong\mathcal{F}_0\mathop{+}^{\mathcal{M}_1}\mathcal{F}_1\mathop{+}^{\mathcal{M}_2}\dots\mathop{+}^{\mathcal{M}_{l-2}}\mathcal{F}_{l-2}\mathop{+}^{\mathcal{M}_{l-1}}\mathcal{F}_{l-1}\,.\]
+    Es l\"asst sich zeigen, dass f\"ur alle \({j}\) ein \({i_j}\) und ein Henkel \({\Psi^{i_j}\colon\mathbb{S}^{i_j-1}\to\mathcal{M}_{j+1}}\) existiert, sodass
+    \[\mathcal{F}_j\cong\left(\mathcal{M}_j\times\mathbb{I}\right)+\Psi^{i_j}\]
+    gilt. Es folgt erneut induktiv, dass
+    \[\mathcal{W}\cong\mathcal{M}\times\mathbb{I}+\sum_{j=1}^l\Psi_j^{i_j}\]
+    gilt. Durch Sammeln aller \({k}\)-Henkel mithilfe des Sortierungssatzes ergibt sich eine gew\"unschte Henkeldarstellung.
+
+    \subsubsection{Duale Repr\"asentation}
+        Die Funktion \({1-f}\) ergibt einen Kobordismus von \({\mathcal{N}}\) zu \({\mathcal{M}}\) und eine Henkelzerlegung, in der jeder \({k}\)-Henkel der originalen Zerlegung mit genau einem \({n-k}\) Henkel korrespondiert.

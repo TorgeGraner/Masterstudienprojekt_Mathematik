@@ -1,0 +1,108 @@
+\subsection*{Wohldefiniertheit des Diffeomorphismus aus Satz \ref{lem:glueing_disc_bundles}}\label{app:diff_well_defined}
+    Sei
+    \[\Phi(z):=\begin{cases}
+        z & z\in\mathcal{M}\setminus\mathcal{V}\\
+        \Tilde{h}_2\left(\frac{2v+\left(1-\norm{v^2}-t^2\right)\pi(z)}{\norm{v^2}+(1-t)^2}\right) & z=tp+v\in\mathcal{B}\setminus\mathcal{V}^{\prime}
+    \end{cases}\,,\]
+    und \(z=v+tp\in\left(\mathcal{V}^{\prime}\right)^{\perp}\setminus\mathbf{0}\) die orthogonale Zerlegung bez\"uglich der riemannschen Metrik. Dann gilt
+    \begin{align}\label{eq:diff_well_defined_identification}
+        \begin{split}
+            \Tilde{h}_2(z)\sim\Tilde{h}_1\circ\alpha(z)&=\frac{\frac{2v}{\norm{z}^2}+\left(1-\norm{\frac{v}{\norm{z}^2}}^2-\left(\frac{t}{\norm{z}^2}\right)^2\right)p}{\norm{\frac{v}{\norm{z}^2}}^2+\left(1+\frac{t}{\norm{z}^2}\right)^2}\\
+            &=\frac{\frac{2v}{\norm{z}^2}+\left(1-\frac{\norm{v}^2}{\norm{z}^4}-\frac{t^2}{\norm{z}^4}\right)p}{\frac{\norm{v}^2}{\norm{z}^4}+\left(1+\frac{t}{\norm{z}^2}\right)^2}\\
+            &=\frac{\frac{2v}{\norm{z}^2}+\left(1-\frac{\norm{z}^2}{\norm{z}^4}\right)p}{\frac{\norm{v}^2}{\norm{z}^4}+1+\frac{2t}{\norm{z}^2}+\frac{t^2}{\norm{z}^4}}\\
+            &=\frac{\frac{1}{\norm{z}^2}\left(2v+\left(\norm{v}^2+t^2-1\right)p\right)}{\frac{1}{\norm{z}^2}\left(1+\norm{z}^2+2t\right)}\\
+            &=\frac{2v+\left(\norm{v}^2+t^2-1\right)p}{\norm{v}^2+\left(1+t\right)^2}\,.
+        \end{split}
+     \end{align}
+     Sei nun
+    \[\beta:=\norm{v}^2+\left(1+t\right)^2\,,\]
+    so gilt weiter
+    \begin{align}\label{eq:diff_well_defined_result}
+        \begin{split}
+            \Tilde{h}_2 ^{-1}\circ\Phi\left(\Tilde{h}_1\circ\alpha(z)\right)&\mathop{=}^{\eqref{eq:diff_well_defined_identification}}\Phi\left(\frac{2v}{\beta}+\frac{\norm{v}^2+t^2-1}{\beta}\,p\right)\\
+            &=\frac{\frac{4v}{\beta}+\left(1-\frac{4\norm{v}^2}{\beta^2}-\left(\frac{\norm{v}^2+t^2-1}{\beta}\right)^2\right)p}{\frac{4\norm{v}}{\beta^2}+\left(1-\frac{\norm{v}^2+t^2-1}{\beta}\right)^2}\\
+            &=\frac{\frac{4v}{\beta}+\frac{\beta^2-4\norm{v^2}-(\norm{v}^2+t^2-1)^2}{\beta^2}\,p}{\frac{4\norm{v}}{\beta^2}+\left(1-\frac{\norm{v}^2+t^2-1}{\beta}\right)^2}\\
+            &\mathop{=}^{\eqref{eq:diff_well_defined_calc_1}}\frac{\frac{4v}{\beta}+\frac{4t\beta p}{\beta^2}}{\frac{4\norm{v}}{\beta^2}+\left(1-\frac{\norm{v}^2+t^2-1}{\beta}\right)^2}\\
+            &\mathop{=}^{\eqref{eq:diff_well_defined_calc_2}}\frac{\frac{4v}{\beta}+\frac{4t\beta}{\beta^2}\,p}{\frac{4\norm{v}}{\beta^2}+\frac{4(1+t)^2}{\beta^2}}=\frac{\frac{4}{\beta}\left(v+tp\right)}{\frac{4}{\beta}\left(\frac{\norm{v}^2+(1+t)^2}{\beta}\right)}\\
+            &=v+tp=z\,,
+        \end{split}
+    \end{align}
+    wobei
+    \begin{align}\label{eq:diff_well_defined_calc_1}
+        \begin{split}
+            &\beta^2-4\norm{v^2}-(\norm{v}^2+t^2-1)^2\\
+            &=\norm{v}^4+2\norm{v}^2(1+t)^2+(1+t)^4-4\norm{v}^2\\
+            &-\norm{v}^4-2\norm{v}^2(t^2-1)-(t^2-1)^2\\
+            &=\norm{v}^4+2\norm{v}^2+4\norm{v}^2t+2\norm{v}^2t^2+1+4t+6t^2+4t^3+t^4-4\norm{v}^2\\
+            &-\norm{v}^4-2\norm{v}^2t^2+2\norm{v}^2-t^4+2t^2-1\\
+            &=4\norm{v}^2t+4t+8t^2+4t^3\\
+            &=4t\left(\norm{v}^2+1+2t+t^2\right)=4t\beta
+        \end{split}
+    \end{align}
+    und
+    \begin{align}\label{eq:diff_well_defined_calc_2}
+        \begin{split}
+            \left(1-\frac{\norm{v}^2+t^2-1}{\beta}\right)^2&=\frac{\left(\norm{v}^2+1+2t+t^2-\norm{v}^2-t^2+1\right)^2}{\beta^2}\\
+            &=\frac{4\left(1+t\right)^2}{\beta^2}
+        \end{split}
+    \end{align}
+    seien. Schlie\ss lich ist also wegen \(\Tilde{h}_2(z)\in\mathcal{M}\setminus\mathcal{V}\)
+    \[\Phi\left(\Tilde{h}_2(z)\right)\mathop{=}^{\text{Def.}}\Tilde{h}_2(z)\mathop{=}^{\eqref{eq:diff_well_defined_result}}\Phi\left(\Tilde{h}_1\circ\alpha(z)\right)\,,\]
+    was die Aussage zeigt. \qed
+
+\newpage
+\section*{Tubenumgebung der Sph\"are}\label{app:sphere_tub_emb}
+    \subsection*{Vor\"uberlegungen}
+        Zun\"achst seien die Diffeomorphismen
+        \[f\colon\mathbb{R}_{>0}\to\,]0,1[,\,x\mapsto\frac{1}{\sqrt{1+x^2}}\quad\text{und}\quad g\colon]0,1[\,\to\mathbb{R}_{>0},\,x\mapsto\frac{\sqrt{1-x^2}}{x}\]
+        definiert. Diese sind zueinander invers, und es gilt
+        \begin{equation}\label{eq:app_tub_01}
+            f\left(\frac{1}{g(x)}\right)=\sqrt{1-x^2}\,.
+        \end{equation}
+        Weiter existieren die Diffeomorphismen
+        \[\Phi\colon\mathring{\mathbb{D}}^k\times\mathbb{D}^{n-k}\to\mathbb{D}^n\setminus\mathbb{S}^{k-1},\,(x,y)\mapsto\left(x,y\sqrt{1-\norm{x}^2}\right)\]
+        und f\"ur \(\mathring{H}^k:=\left(\mathring{\mathbb{D}}^k\setminus\{0\}\right)\times\mathbb{D}^{n-k}\) auch
+        \[\Lambda\colon\mathring{H}^k\to\mathring{H}^k,\,(x,y)\mapsto\left(x\frac{\sqrt{1-\norm{x}^2}}{\norm{x}},y\right)\,,\]
+        wobei \(\Lambda\) gleichzeitig eine Involution ist.
+
+    \subsection*{Die Tubenumgebung}
+        Als Vektorb\"undel sei 
+        \[\pi\colon E\to\mathbb{S}^{k-1},\,(p,v)\mapsto p\quad\text{mit}\quad E:=\mathbb{S}^{k-1}\times\mathbb{R}^{n-k}\]
+        gew\"ahlt. Betrachte den Diffeomorphismus
+        \[G\colon E\times\mathbb{R}_{\geq0}\setminus\mathbf{0}\to\mathring{H}^k,\,(p,z)\mapsto\left(f(\norm{z})\cdot p,\frac{x}{\norm{z}}\right)\]
+        mit der Inversen
+        \[G^{-1}\colon\mathring{H}^k\to E\times\mathbb{R}_{\geq0}\setminus\mathbf{0},\,(x,y)\mapsto\left(\frac{x}{\norm{x}},g\left(\norm{x}\right)\left(y,\sqrt{1-\norm{y}^2}\right)\right)\,.\]
+        Die gesuchte Einbettung ist nun 
+        \[\Tilde{h}\colon E\times\mathbb{R}_{\geq0}\to U\subset\mathbb{D}^n,\,(p,z)\mapsto\begin{cases}
+            F\circ G(p,z) & z\not=0\\
+            (p,0) & \text{sonst}
+        \end{cases}\,.\]
+    
+    \subsection*{Alpha}
+        Es verbleibt zu zeigen, dass bei dieser Wahl der Einbettung \(\Tilde{h}\circ\alpha_E\circ\Tilde{h}^{-1}=\alpha\) gilt. Zun\"achst sei angemerkt, dass \(\alpha=F^{-1}\circ\Lambda\circ F\) ist, sodass lediglich \(\Lambda=G\circ\alpha_E\circ G^{-1}\) gezeigt werden muss. Die Aussage folgt aus
+        \begin{align*}
+            G\circ\alpha_E\circ G^{-1}(x,y)&=G\circ\alpha_E\left(\frac{x}{\norm{x}},g\left(\norm{x}\right)\cdot y,g\left(\norm{x}\right)\sqrt{1-\norm{y}^2}\right)\\
+            &=G\left(\frac{x}{\norm{x}},\frac{y}{g(\norm{z})},\frac{\sqrt{1-\norm{y}^2}}{g(\norm{z})}\right)\\
+            &=\left(f\left(\frac{1}{g(\norm{z})}\right)\frac{x}{\norm{x}},\frac{y}{g(\norm{z})}g(\norm{z})\right)\\
+            &\mathop{=}^{\eqref{eq:app_tub_01}}\left(x\frac{\sqrt{1-\norm{x}^2}}{\norm{x}},y\right)=\Lambda(x,y)\,.
+        \end{align*}
+    
+\newpage
+\subsection*{Wohldefiniertheit der Projektion aus Satz \ref{lem:handle_on_unit_disc}}\label{app:disc_bundle_well_defined}
+    Zun\"achst gilt f\"ur \(z=(x,y)\in U\)
+    \begin{align}\label{eq:disc_bundle_well_defined_calc_1}
+        \begin{split}
+            \Tilde{\Psi}(z)&=\norm{z}\Psi\left(\frac{z}{\norm{z}}\right)\\
+            &=\norm{z}\left(\norm{\frac{x}{\norm{z}}}\psi\left(\frac{\frac{x}{\norm{z}}}{\frac{x}{\norm{z}}}\right),\gamma\left(\frac{\frac{x}{\norm{z}}}{\frac{x}{\norm{z}}}\right)\frac{y}{\norm{z}}\right)\\
+            &=\left(\norm{x}\psi\left(\frac{x}{\norm{x}}\right),\gamma\left(\frac{x}{\norm{x}}\right)y\right)
+        \end{split}
+    \end{align}
+    also
+    \begin{align*}
+        \Tilde{\Psi}\circ\alpha(z)&=\Tilde{\Psi}\left(x\frac{\sqrt{1-\norm{x}^2}}{\norm{x}},y\frac{\norm{x}}{\sqrt{1-\norm{x}^2}}\right)\\
+        &\mathop{=}^{\eqref{eq:disc_bundle_well_defined_calc_1}}\left(\sqrt{1-\norm{x}^2}\psi\left(\frac{x}{\norm{x}}\right),\frac{\norm{x}}{\sqrt{1-\norm{x}^2}}\gamma\left(\frac{x}{\norm{x}}\right)y\right)
+    \end{align*}
+    und somit 
+    \[\pi\left(\Tilde{\Psi}\circ\alpha(z)\right)=\sqrt{1-\norm{x}^2}\psi\left(\frac{x}{\norm{x}}\right)\,,\]
+    sowie
+    \[\Tilde{\Psi}\circ\alpha(\pi(z))=\left(\sqrt{1-\norm{x}^2}\psi\left(\frac{x}{\norm{x}}\right),0\right)\,.\]

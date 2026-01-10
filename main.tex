@@ -1,0 +1,172 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{units}    % units
+\usepackage{nicefrac} % fractions within text
+\usepackage[german]{babel}
+\usepackage{tikz}
+\usetikzlibrary{calc, intersections, decorations.pathreplacing, calligraphy, patterns, arrows.meta, positioning, shapes}
+\usepackage{pgf, pgfplots}
+\pgfplotsset{compat = 1.18} 
+\usepackage{algorithm, algorithmicx, algpseudocode} % Pseudocode
+\usepackage{amsmath, amssymb, amsthm} % definitions
+\usepackage{bbm}
+\usepackage{pict2e} % angle symbol
+\usepackage[pdfpagelabels,colorlinks,allcolors=blue]{hyperref} % Hyperlink referencing
+\usepackage{subcaption} % subfigure captions
+\usepackage{bm} % Bold math letters
+\usepackage{tipa, stmaryrd} % eta symbol
+\usepackage{multirow} % Multirow table
+\usepackage{booktabs} % Better tables
+\usepackage{cancel}
+
+\algrenewcommand\algorithmicrequire{\textbf{Input:}}
+\algrenewcommand\algorithmicensure{\textbf{Output:}}
+\algnewcommand\AND{\textbf{and }}
+\algnewcommand\OR{\textbf{or }}
+\algnewcommand\NOT{\textbf{not }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\theta}{\vartheta}
+\renewcommand{\eta}{%
+    \raisebox{-0.7mm}[0.8\height][\width]{
+        \parbox{0.5mm}{
+            \makebox[0.1mm]{
+            \begin{tikzpicture}%
+                \draw node at (-0.04, 0) {\scalebox{0.9}{\textlhtlongi}}; 
+                \draw node at (0.09, -0.08) {\rotatebox[origin=c]{15}{\scalebox{1}[-1]{\(\Rbag\)}}};
+            \end{tikzpicture}%
+            }
+        }
+    }\hspace*{1pt}
+}
+
+
+\DeclareSymbolFont{myletters}{OML}{ztmcm}{m}{it}
+\DeclareMathSymbol{\uplambda}{\mathord}{myletters}{"15}
+\renewcommand{\lambda}{\uplambda}
+\newcommand{\dx}{\textup{d}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\abs{\abs{#1}}}
+\def\i{\boldsymbol{i}}
+\newcommand{\commend}[1]{}
+\newcommand{\angl}{
+    \raisebox{-0.5mm}{
+        \begin{tikzpicture}[line width = 0.2]
+            \draw [rounded corners = 0.1] (27:0.35) -- (0, 0) -- (-25.5:0.35);
+            \draw (-25.5:0.2) arc (-27:25.5:0.2);
+        \end{tikzpicture}
+    }\hspace*{-1.5mm}
+}
+
+\let\cleardoublepage\clearpage
+\DeclareRobustCommand{\lltriangle}{%
+  \begingroup
+  \setlength{\unitlength}{1ex}%
+  \begin{picture}(1,1)
+  \polygon(0, 0)(1.3, 0)(0, 1.3)
+  \end{picture}%
+  \endgroup
+}
+
+\newtheoremstyle{break}{}{}{\itshape}{}{\bfseries}{.}{\newline}{}
+\newtheoremstyle{rem}{}{}{}{}{\bfseries}{.}{\newline}{}
+  
+\theoremstyle{break}
+    \newtheorem{definition}{Definition}
+    \newtheorem{theorem}{Satz}
+    \newtheorem{lemma}{Lemma}
+    \newtheorem{corollary}{Korollar}
+
+\theoremstyle{rem}
+    \newtheorem{example}{Beispiel}
+    \newtheorem{remark}{Bemerkung}
+    \newtheorem{proposition}{Proposition}
+
+\renewcommand\qedsymbol{q.e.d.}
+\let\oldref\ref
+\AtBeginDocument{
+    \renewcommand{\ref}[1]{[\oldref{#1}]}
+    \renewcommand{\eqref}[1]{(\oldref{#1})}
+}
+
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \LARGE{\textsc{}}
+            
+            \vfill
+            
+            \LARGE{\emph{Studienprojekt}}
+            
+            \vspace{8mm}
+            
+            \huge{\textbf{Der H-Kobordismus-Satz}}
+            
+            \vspace{8mm}
+            
+            \LARGE{Torge Graner}
+            
+            \vspace{32mm}
+            
+            \large{\today}
+            \vfill
+            
+            \begin{tabular}{ll}
+              \large
+              Betreuer: & \large Prof. Dr. Oliver R\"ondigs
+            \end{tabular}
+        \end{center} 
+    \end{titlepage}
+    \addtocontents{toc}{\protect\thispagestyle{empty}}
+    \tableofcontents
+    \thispagestyle{empty}
+
+    \setcounter{chapter}{-1}
+    \setcounter{page}{0}
+    \newpage % -- Ausbessern --
+    \chapter{Einleitung}\label{chp:introduction}
+        \input{00-Einleitung}
+    
+    \newpage % -- Ausbessern --
+    \chapter{Mannigfaltigkeiten}\label{chp:manifolds}
+        \input{01-Mannigfaltigkeiten}
+
+    \newpage % -- Ausbessern --
+    \chapter{Henkelk\"orper}\label{chp:handlebodies}
+        \input{02-Henkelkörper}
+
+    \newpage % -- Ausbessern --
+    \chapter{Etwas Morsetheorie}\label{chp:morse_theory}
+        \input{03-Morsetheorie}
+    
+    \newpage % -- Aufräumen --
+    \chapter{Einfache K\"urzungen}\label{chp:handle_cancellation}
+        \input{04-Aufhebungssatz}
+        
+    \newpage % -- Modifikationslemma unvollständig --
+    \chapter{Homologie von Kobordismen}\label{chp:cobordism_homology}
+        \input{05-HomologieVonKobordismen}
+    
+    \newpage % -- Einfacher Zusammenhang von W_k zeigen --
+    \chapter{Entfernung der 0- und 1-Henkel}\label{chp:remove_zero_one_handles}
+        \input{06-EntfernungDer01Henkel}
+        
+    \newpage % -- Fertig --
+    \chapter{Der H-Kobordismus-Satz}\label{chp:h_cobordism_theorem} 
+        \input{07-HKobordismusSatz}
+
+    \newpage
+    \refstepcounter{chapter}
+    \addcontentsline{toc}{chapter}{Appendix}
+    \chapter*{Appendix}
+        \input{Appendix}
+        
+    \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+    \bibliographystyle{alpha}
+    \bibliography{sources}
+\end{document}
