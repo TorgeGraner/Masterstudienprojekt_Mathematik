@@ -1,1 +1,2 @@
-A mostly complete proof of the H-Cobordism-Theorem using handle-reductions. Run ```bibtex main``` in project directory for a working bibliography.
+# Masterstudienprojekt Mathematik
+Ein (bis auf Morse-Theorie) vollständiger Beweis des H-Kobordismus-Satzes, der garantiert, dass jeder mindestens 6-dimensionale, einfach zusammenhängende H-Kobordismus trivial ist. Geht über die Reduktion einer Henkelzerlegung hin zu einer Zerlegung, die keine Henkel enthält.
